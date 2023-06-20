@@ -1,0 +1,28 @@
+<%- include('partials/header') %> <% let i = 0; %> <% prevArr.map(pic => { %> <%
+i++; %>
+<div class="container-content">
+  <div class="page">
+    <span>Pages: </span>
+    <span><%= id %></span>
+    <a href="/previous/<%= Number(id) + 1 %>"><%= Number(id) + 1 %></a>
+    <a href="/previous/<%= Number(id) + 2 %>"><%= Number(id) + 2 %></a>
+  </div>
+  <div class="img-title">
+    <h1><%= pic.title %></h1>
+    <img
+      src="<%= pic.url %>"
+      alt="<%= pic.title %>"
+      onclick="toggle_visibility('contact-popup-<%= i %>')"
+    />
+  </div>
+  <p><%= pic.explanation %></p>
+</div>
+<!-- CONTACT MODAL -->
+<div class="popup-position" id="contact-popup-<%= i %>">
+  <%- include('partials/modal', {pic: pic, page_name: page_name, i: i}); %>
+</div>
+
+<% }) %> <%- include('partials/footer') %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/contact_modal.js"></script>

@@ -1,0 +1,45 @@
+<div class="modal-wrapper">
+  <div id="modal-container">
+    <div class="title">
+        <h1><%= pic.title %></h1>
+    </div>
+    <div class="modal-body">
+        <img src="<%= pic.url %>" alt="<%= pic.title %>" />
+        <div class="text">
+        <p><span class="bold">Date: </span><span><%= pic.date %></span></p>
+        <p>
+            <span class="bold">Copyright: </span><span><%= pic.copyright %></span>
+        </p>
+        <p>
+            <span class="bold">Service Version: </span
+            ><span><%= pic.service_version %></span>
+        </p>
+        <p>
+            <span class="bold">url: </span
+            ><span><a href="<%= pic.url %>">Image</a></span>
+        </p>
+        <p>
+            <span class="bold">HD url: </span
+            ><span><a href="<%= pic.hdurl %>">HD Image</a></span>
+        </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <p>
+        <% if (page_name === 'previous') { %>
+        <a
+          herf="javascript:void(0)"
+          onclick="toggle_visibility('contact-popup-<%= i %>');"
+          >Close Popup</a
+        >
+        <% } else { %>
+          <a
+          herf="javascript:void(0)"
+          onclick="toggle_visibility('contact-popup');"
+          >Close Popup</a
+        >
+        <% } %>
+      </p>
+    </div>
+  </div>
+</div>

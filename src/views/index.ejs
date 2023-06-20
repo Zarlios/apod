@@ -1,0 +1,21 @@
+<%- include('partials/header'); %>
+<div class="container-content">
+  <div class="img-title">
+    <h1><%= pic.title %></h1>
+    <img
+      src="<%= pic.url %>"
+      alt="<%= pic.title %>"
+      onclick="toggle_visibility('contact-popup')"
+    />
+  </div>
+  <h5>Photo Explanation:</h5>
+  <p><%= pic.explanation %></p>
+</div>
+<!-- CONTACT MODAL -->
+<div class="popup-position" id="contact-popup">
+  <%- include('partials/modal'); %>
+</div>
+<%- include('partials/footer'); %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/contact_modal.js"></script>
