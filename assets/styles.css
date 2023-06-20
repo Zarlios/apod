@@ -60,11 +60,12 @@ body {
   justify-items: center;
 }
 
-.container-content .page {
+.page {
   display: flex;
   flex-direction: row;
   gap: 5px;
   margin-top: 20px;
+  padding: 0px 5em;
 }
 
 .container-content .img-title {

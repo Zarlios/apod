@@ -1,12 +1,13 @@
-<%- include('partials/header') %> <% let i = 0; %> <% prevArr.map(pic => { %> <%
-i++; %>
-<div class="container-content">
+<%- include('partials/header') %>
+
   <div class="page">
     <span>Pages: </span>
     <span><%= id %></span>
     <a href="/previous/<%= Number(id) + 1 %>"><%= Number(id) + 1 %></a>
     <a href="/previous/<%= Number(id) + 2 %>"><%= Number(id) + 2 %></a>
   </div>
+  <% let i = 0; %> <% prevArr.map(pic => { %> <% i++; %>
+  <div class="container-content">
   <div class="img-title">
     <h1><%= pic.title %></h1>
     <img
